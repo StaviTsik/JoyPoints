@@ -1,0 +1,61 @@
+Pseudocode
+
+
+ read the championship year  
+   While year is =<2011    
+         then 
+             set matchday to 0
+             read matchday
+                 if matchday is <= 30
+                 then set hometeam/Brage
+                       set joypoints to 0
+                       if hometeamgoals > awaygoals
+                          add 5
+                       else add 0
+                 set joypoints to (joypoint + 5)
+                 And while home team goals >0
+                    add to joypoints
+		 write sum joypoints 
+                 If joypoints are >= 300
+		    write "(selected team) made its fans very super joyous!"
+                 else if joypoints are <= 299 and >=250
+		    write "(selected team) made its fans enough joyous!"
+			else if joypoints are <= 249 and >=150
+                     write "(selected team) made its fans joyous on average!"
+		        else if joypoints are <= 149 and >=50
+		     write "(selected team) offered a pour amount of joy to  its fans!"
+			else if joypoints are <50
+		     write "(selected team) made their fans to feel miserable!"
+    else write "not available data range"
+
+
+Pseudocode in words
+
+1) Read the championship year
+2) if the year is smaller/equal to 2002 then:
+3) Set the variable matchday to 0
+4) Read season/matchday
+5) if matchday is smaller/equal to 30 then:
+6) set hometeam to Brage**** (selection of one team)
+7) set  the variable joypoints to 0
+8) if the hometeam's goals are more than the awayteam's
+9) we give a new value to our variable by adding 5 to it (joypoint + 5)
+10) if not we add to its value 0
+27)else set variable matchday to matchday+1
+11) And set hometeam goals to 0
+12) if  the goals of the hometeam are more than 0
+13) Then add this number to the variable's value
+14) else add 0 to it.
+15) Set joypoints as the sum of (joypoints + hometeamgoals)
+16) Write the number of the (final)value of the variable joypoints
+17) If the value joypoints is >= 300
+18) Then write "(selected team) made its fans very super joyous!"
+19) Else if the value joypoints is <= 299 and >=250
+20) Then write "(selected team) made its fans enough joyous!" 
+21) Else if the value joypoints is <= 249 and >=150
+22) Then write "(selected team) made its fans joyous on average!" 
+23) Else if the value joypoints is <= 149 and >=100
+24) Then write "(selected team) offered a pour amount of joy to  its fans!"
+25) Else if the value joypoints is <100  
+26) Write "(selected team) made their fans to feel miserable!"
+28)else write "not available data range" 
