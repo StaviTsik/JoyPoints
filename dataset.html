@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home - JoyPoints!</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div class="logo-container">
+            <img src="Logo.png" width="550" height="150">
+        </div>
+        <h1>JoyPoints</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Superettan.html">Superettan</a>
+            <a href="dataset.html">Dataset</a>
+            <a href="algorithm.html">Algorithm</a>
+            <a href="people.html">People</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Dataset</h2>
+        <section>
+            <h2>What are JoyPoints?</h2>
+            <p>JoyPoints (we will use it in one word as a technical term) are units of joy. They are referred to as carefully selected by us occasions, that of scoring a goal and celebrating a win.</p>
+            <p>To be even more specific, we focus on home matches because we want, in order to restrict the results, to concentrate on the experience of the people who watch the game live from the stands.</p>
+            <p>Let’s assume this is “pure joy” for a fan and JoyPoints are intended to measure it! When a team scores a goal, it makes their fans very happy, but not extremely.</p>
+            <p>After all, scoring a number of goals does not guarantee the result of the game in terms of JoyPoints? This happiness is limited, so we will attribute to it only 1 JoyPoint. But when the final whistle is blown and the home team has won, local fans become super enthusiastic and proud. Therefore, the joy is greater and lasts longer. So, we attribute to it 5 JoyPoints. The combination of the JoyPoints gives a number for every team’s home game.</p>
+        </section>
+    </div>    
+        <style>
+        body {
+            font-family: styles.css;
+            background-color: styles.css;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: href= styles.css;
+            color: #333;
+        }
+
+        .joypoints-table {
+            display: inline-block; 
+            margin: 0 10px; 
+            border-collapse: collapse; 
+            background: white; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .joypoints-table th, .joypoints-table td {
+            padding: 5px 10px; 
+            text-align: left; 
+            border: 1px solid #ddd; 
+        }
+
+        .joypoints-table th {
+            background-color: #007BFF; 
+            color: white; 
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <table class="joypoints-table">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Win</td>
+                <td>5 points</td>
+            </tr>
+            <tr>
+                <td>Goal</td>
+                <td>1 point</td>
+            </tr>
+        </tbody>
+    </table>    
+    <section>
+            <h2>Example Calculation</h2>
+            <p>For example, if Team A won its first home game by 2-1, the JoyPoints offered to their fans are:</p>
+            <p><strong>2 (1 for each goal) + 5 (for the win) = 7 in total.</strong></p>
+            <p>The sum of these points adds to the total number of JoyPoints for each season. And if we sum up the JoyPoints for a period of 5 years (I will probably add two more seasons in the dataset to have a round number), we will have a clear view of Superettan’s joy to their fans!</p>
+        </section>
+       <footer>
+        <p>© 2024 Algorithm Design Project Work : Group 4</p>
+    </footer>
+</body>
+</html>
