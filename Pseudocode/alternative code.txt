@@ -1,0 +1,31 @@
+1. Set year = 2011           // Start from 2011
+2. Set total_joy_points = 0   // Initialize total joy points counter
+3. Set match_counter = 0      // Initialize match counter to count matches for each year
+4. For each year from 2011 to 2015:
+    a. Print "Starting calculations for year [year]"   // Output the current year
+    
+    b. For each match in the year (1 to 30):
+        i. Input match details: 
+            - goals_scored_by_selected_team (integer)
+            - match_result ("win", "draw", "lose")
+            - team_type ("home", "away")
+        
+        ii. Add joy points for goals scored:
+            - joy_points_for_goals = goals_scored_by_selected_team
+            - Add joy_points_for_goals to total_joy_points
+        
+        iii. Check if the selected team won:
+            - If match_result == "win":
+                - Add 3 joy points for the win:
+                  - If team_type == "home" OR team_type == "away":
+                      - Add 3 joy points to total_joy_points
+        
+        iv. Increment match_counter by 1
+        
+        v. If match_counter == 30:
+            - Print "End of year [year] calculations"
+            - Reset match_counter to 0
+        
+    c. Increment year by 1 (move to the next year)
+
+5. Print "Total joy points accumulated from 2011 to 2015: [total_joy_points]"

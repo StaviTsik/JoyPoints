@@ -1,0 +1,40 @@
+# Initialize variables
+joy_points = 0
+match_day_counter = 0
+max_matches = 30  # Total limit of matches to calculate joy points for
+selected_team = "TeamA"  # This will be the team selected by the user
+team_data = load_data("Superettan.xml")  # Function to load the dataset (Superettan.xml)
+
+# Iterate over the dataset
+for match in team_data:
+    home_team = match["HomeTeam"]
+    away_team = match["AwayTeam"]
+    home_goals = match["HomeGoals"]
+    away_goals = match["AwayGoals"]
+    
+    # Check if the selected team is the home team
+    if home_team == selected_team:
+        match_day_counter += 1  # Increment the match counter for home matches
+        
+        # Award joy points for the home match performance
+        if home_goals > away_goals:  # Home team wins
+            joy_points += 3  # 3 points for winning
+        elif home_goals > 0:  # Home team scores goals but doesn't win
+            joy_points += 1  # 1 point for scoring goals
+
+    # Check if the selected team is the away team
+    elif away_team == selected_team:
+        match_day_counter += 1  # Increment the match counter for away matches
+        
+        # Award joy points for the away match performance
+        if away_goals > home_goals:  # Away team wins
+            joy_points += 3  # 3 points for winning
+        elif away_goals > 0:  # Away team scores goals but doesn't win
+            joy_points += 1  # 1 point for scoring goals
+
+    # Stop if the team has played 30 matches (home or away)
+    if match_day_counter == max_matches:
+        break
+
+# Output the total joy points for the selected team
+print(f"Total joy points for {selected_team}: {joy_points}")
