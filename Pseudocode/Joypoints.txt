@@ -3,11 +3,10 @@ Pseudocode
 set year to 2011
 set joypoints to 0
 While year is <=2015 then 
-	set matchday to 0
-        read matchday
-        if matchday is <= 30
-        then 
-		set hometeam/Brage
+	set round to 0
+        while round is <= 30
+	read round
+		set HomeTeam/"
 		read hometeamgoals
 		read awaygoals
                 if hometeamgoals >= awaygoals 
@@ -32,6 +31,7 @@ While year is <=2015 then
 		else if joypoints are <50
 		     write "(selected team) made their fans to feel miserable!"
     		else write "not available data range"
-	end of if
+	round add 1
+end of while
 	year add 1 
 end of while
