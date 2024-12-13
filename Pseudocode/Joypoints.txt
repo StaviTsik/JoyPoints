@@ -6,30 +6,30 @@ While year is <=2015 then
 	set round to 0
         while round is <= 30
 	read round
-		set HomeTeam/"
-		read hometeamgoals
-		read awaygoals
-                if hometeamgoals >= awaygoals 
-		and hometeamgoals > 0 then
-			set joypoints to (1 for each hometeamgoals)
-			if hometeamgoals > awaygoals then
+		set HomeTeam/"SelectedTeam"
+		read HomeTeamGoals
+		read AwayTeamGoals
+                if HomeTeamGoals >= AwayTeamGoals 
+		and  HomeTeamGoals > 0 then
+			set joypoints to (1 for each  HomeTeamGoals)
+			if  HomeTeamGoals > AwayTeamGoals then
                 		set joypoints to (joypoints + 5) for the win
-		else if hometeamgoals < awaygoals 
-		and hometeamgoals > 0 then
-			set joypoints to (1 for each hometeamgoals)
-		else if  hometeamgoals = 0
+		else if  HomeTeamGoals < AwayTeamGoals
+		and  HomeTeamGoals > 0 then
+			set joypoints to (1 for each  HomeTeamGoals)
+		else if   HomeTeamGoals = 0
 			add 0 to joypoints
 		write sum joypoints 
                 If joypoints are >= 300
-		    write "(selected team) made its fans very super joyous!"
+		    write "(SelectedTeam) made its fans very super joyous!"
                 else if joypoints are <= 299 and >=250
-		    write "(selected team) made its fans enough joyous!"
+		    write "(SelectedTeam) made its fans enough joyous!"
 		else if joypoints are <= 249 and >=150
-                     write "(selected team) made its fans joyous on average!"
+                     write "(SelectedTeam) made its fans joyous on average!"
 		else if joypoints are <= 149 and >=50
-		     write "(selected team) offered a pour amount of joy to  its fans!"
+		     write "(SelectedTeam) offered a pour amount of joy to  its fans!"
 		else if joypoints are <50
-		     write "(selected team) made their fans to feel miserable!"
+		     write "(SelectedTeam) made their fans to feel miserable!"
     		else write "not available data range"
 	round add 1
 end of while
