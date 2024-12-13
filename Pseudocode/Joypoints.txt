@@ -1,12 +1,16 @@
 Pseudocode
 
+For all Matches
 set year to 2011
 set joypoints to 0
+set HomeTeam as SelectedTeam
 While year is <=2015 then 
 	set round to 0
         while round is <= 30
 	read round
-		set HomeTeam/"SelectedTeam"
+		check SelectedTeam = Match.HomeTeam
+		check round = Match.round
+		check year = Match.year
 		read HomeTeamGoals
 		read AwayTeamGoals
                 if HomeTeamGoals >= AwayTeamGoals 
@@ -17,7 +21,7 @@ While year is <=2015 then
 		else if  HomeTeamGoals < AwayTeamGoals
 		and  HomeTeamGoals > 0 then
 			set joypoints to (1 for each  HomeTeamGoals)
-		else if   HomeTeamGoals = 0
+		else if  HomeTeamGoals = 0
 			add 0 to joypoints
 		write sum joypoints 
                 If joypoints are >= 300
@@ -35,3 +39,4 @@ While year is <=2015 then
 end of while
 	year add 1 
 end of while
+end of for
